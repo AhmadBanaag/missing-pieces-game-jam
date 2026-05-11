@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bqmla8lukc8d4"]
+
+[ext_resource type="Texture2D" uid="uid://04whtuc80vqy" path="res://sprites/parallax_forest_pack web/parallax_forest_pack web/v2/layers/back.png" id="1_45q7n"]
+[ext_resource type="Texture2D" uid="uid://jafayu51b5g7" path="res://sprites/parallax_forest_pack web/parallax_forest_pack web/v2/layers/middle.png" id="2_gvcbt"]
+
+[node name="Node2D" type="Node2D" unique_id=1441920609]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1505537693]
+
+[node name="Parallax2D" type="Parallax2D" parent="ParallaxBackground" unique_id=2055112569]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2D" unique_id=1655289387]
+position = Vector2(615, 369.00003)
+scale = Vector2(4.5812488, 4.581249)
+texture = ExtResource("1_45q7n")
+
+[node name="Parallax2D2" type="Parallax2D" parent="ParallaxBackground" unique_id=162121759]
+scroll_offset = Vector2(89, 68)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2D2" unique_id=475670587]
+position = Vector2(533, 298)
+scale = Vector2(4.53125, 4.53125)
+texture = ExtResource("2_gvcbt")
