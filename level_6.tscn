@@ -3,21 +3,36 @@
 [ext_resource type="Texture2D" uid="uid://04whtuc80vqy" path="res://sprites/parallax_forest_pack web/parallax_forest_pack web/v2/layers/back.png" id="1_45q7n"]
 [ext_resource type="Texture2D" uid="uid://jafayu51b5g7" path="res://sprites/parallax_forest_pack web/parallax_forest_pack web/v2/layers/middle.png" id="2_gvcbt"]
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_45q7n"]
+distance = -13.0
+
 [node name="Node2D" type="Node2D" unique_id=1441920609]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1505537693]
 
-[node name="Parallax2D" type="Parallax2D" parent="ParallaxBackground" unique_id=2055112569]
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=2138757966]
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(1240, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2D" unique_id=1655289387]
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" unique_id=1655289387]
+texture_filter = 1
 position = Vector2(615, 369.00003)
 scale = Vector2(4.5812488, 4.581249)
 texture = ExtResource("1_45q7n")
 
-[node name="Parallax2D2" type="Parallax2D" parent="ParallaxBackground" unique_id=162121759]
-scroll_offset = Vector2(89, 68)
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1109354118]
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(1240, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2D2" unique_id=475670587]
-position = Vector2(533, 298)
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=475670587]
+texture_filter = 1
+position = Vector2(622, 366)
 scale = Vector2(4.53125, 4.53125)
 texture = ExtResource("2_gvcbt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1666282342]
+position = Vector2(162, 756)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1332378883]
+position = Vector2(-204, -39)
+shape = SubResource("WorldBoundaryShape2D_45q7n")
