@@ -174,6 +174,7 @@ animations = [{
 size = Vector2(14, 66)
 
 [node name="Player" type="CharacterBody2D" unique_id=621599409 groups=["player"]]
+z_index = 1
 collision_layer = 2
 script = ExtResource("1_qhqgy")
 
@@ -182,7 +183,7 @@ scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_60mlk")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.2973394
+frame_progress = 0.72846407
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=927503292]
 position = Vector2(-3, 6)
