@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://c6ljgl8lgc6kk" path="res://scripts/lv4_world_manager.gd" id="6_ycko3"]
 [ext_resource type="Texture2D" uid="uid://bn2angvg77rto" path="res://sprites/Vignette.png" id="8_qsmat"]
 [ext_resource type="Texture2D" uid="uid://b8q4v22x4kyhb" path="res://sprites/red_vignette.png" id="9_yk4f3"]
+[ext_resource type="PackedScene" uid="uid://b8d4gmhfmxcyq" path="res://scenes/spike.tscn" id="10_cp0rv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6j14n"]
 texture = ExtResource("1_huvaw")
@@ -966,7 +967,6 @@ position = Vector2(418, 242)
 scale = Vector2(2, 2)
 
 [node name="MirrorWorld" type="Node2D" parent="." unique_id=30702479]
-visible = false
 
 [node name="TileMap" type="TileMap" parent="MirrorWorld" unique_id=1554091818]
 texture_filter = 1
@@ -999,6 +999,54 @@ scale = Vector2(1.5, 1.5)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MirrorWorld/platform3" unique_id=1161433556]
 libraries/ = SubResource("AnimationLibrary_wom6i")
 autoplay = &"moving_platform"
+
+[node name="Area2D" parent="MirrorWorld" unique_id=1974345284 instance=ExtResource("10_cp0rv")]
+position = Vector2(84, 657)
+scale = Vector2(2, 2)
+
+[node name="Area2D2" parent="MirrorWorld" unique_id=562814917 instance=ExtResource("10_cp0rv")]
+position = Vector2(151, 657)
+scale = Vector2(2, 2)
+
+[node name="Area2D3" parent="MirrorWorld" unique_id=1154623310 instance=ExtResource("10_cp0rv")]
+position = Vector2(217, 657)
+scale = Vector2(2, 2)
+
+[node name="Area2D4" parent="MirrorWorld" unique_id=38390231 instance=ExtResource("10_cp0rv")]
+position = Vector2(277, 657)
+scale = Vector2(2, 2)
+
+[node name="Area2D5" parent="MirrorWorld" unique_id=1367615688 instance=ExtResource("10_cp0rv")]
+position = Vector2(343, 657)
+scale = Vector2(2, 2)
+
+[node name="Area2D6" parent="MirrorWorld" unique_id=1312629181 instance=ExtResource("10_cp0rv")]
+position = Vector2(409, 657)
+scale = Vector2(2, 2)
+
+[node name="Area2D7" parent="MirrorWorld" unique_id=464252404 instance=ExtResource("10_cp0rv")]
+position = Vector2(475, 657)
+scale = Vector2(2, 2)
+
+[node name="Area2D8" parent="MirrorWorld" unique_id=1554192821 instance=ExtResource("10_cp0rv")]
+position = Vector2(541, 657)
+scale = Vector2(2, 2)
+
+[node name="Area2D9" parent="MirrorWorld" unique_id=158998815 instance=ExtResource("10_cp0rv")]
+position = Vector2(607, 657)
+scale = Vector2(2, 2)
+
+[node name="Area2D10" parent="MirrorWorld" unique_id=1777509352 instance=ExtResource("10_cp0rv")]
+position = Vector2(673, 657)
+scale = Vector2(2, 2)
+
+[node name="Area2D11" parent="MirrorWorld" unique_id=1635245765 instance=ExtResource("10_cp0rv")]
+position = Vector2(739, 657)
+scale = Vector2(2, 2)
+
+[node name="Area2D12" parent="MirrorWorld" unique_id=2005900639 instance=ExtResource("10_cp0rv")]
+position = Vector2(806, 657)
+scale = Vector2(2, 2)
 
 [node name="player" parent="." unique_id=1240685424 instance=ExtResource("5_wom6i")]
 position = Vector2(1122, 599)

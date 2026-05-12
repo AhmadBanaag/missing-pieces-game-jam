@@ -14,6 +14,7 @@ func _physics_process(delta: float) -> void:
 	# GRAVITY
 	if not is_on_floor():
 		velocity.y += GRAVITY * delta
+		_sprite.animation = "jump"
 
 
 	# JUMP
@@ -34,12 +35,17 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-
-	# ANIMATION
-	if direction != 0:
-		_sprite.animation = "run"
+	if is_on_floor():
+		# ANIMATION
+		if direction != 0:
+			_sprite.animation = "run"
+		else:
+			_sprite.animation = "idle"
+			
 	else:
-		_sprite.animation = "idle"
+		_sprite.animation = "jump"
+		
+	
 
 
 	# FLIP
