@@ -14,9 +14,9 @@ var switch_cooldown = 5.0
 var drain_enabled = true
 var is_dead = false
 
+
 @onready var normal_world = $"../NormalWorld"
 @onready var reflection_world = $"../MirrorWorld"
-@onready var camera = get_tree().get_first_node_in_group("camera")
 
 
 func _ready():
@@ -59,11 +59,10 @@ func switch_dimension():
 	#For Timer
 	can_switch = false
 	#Shaking of Camera
-	if camera:
-		camera.apply_shake()
+	$"../player/CameraLv_5".apply_shake()
 	#For playing transition
 	
-	$"../CanvasLayer/DimensionTransition".play("dimension_transition")
+	$"../player/CanvasLayer/DimensionTransition".play("dimension_transition")
 	
 	in_reflection_world = !in_reflection_world
 
@@ -73,8 +72,8 @@ func switch_dimension():
 	set_world_collision(normal_world, !in_reflection_world)
 	set_world_collision(reflection_world, in_reflection_world)
 	
-	var anim = $"../CanvasLayer/AnimationPlayer"
-	var death_anim = $"../CanvasLayer/AnimationPlayer2"
+	var anim = $"../player/CanvasLayer/AnimationPlayer"
+	var death_anim = $"../player/CanvasLayer/AnimationPlayer2"
 	
 	drain_enabled = false
 	anim.play("cooldown_start")

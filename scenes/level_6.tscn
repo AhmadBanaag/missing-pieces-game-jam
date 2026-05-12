@@ -13,8 +13,152 @@
 [ext_resource type="Texture2D" uid="uid://naypi6unfi20" path="res://sprites/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0000_9.png" id="11_epfji"]
 [ext_resource type="Texture2D" uid="uid://bsg1my2gu60bp" path="res://sprites/parallax_forest_pack web/parallax_forest_pack web/v2/layers/front.png" id="12_wps6d"]
 [ext_resource type="PackedScene" uid="uid://pwfjqlc6sbxd" path="res://scenes/player.tscn" id="13_2hef4"]
+[ext_resource type="Texture2D" uid="uid://bn2angvg77rto" path="res://sprites/Vignette.png" id="14_hrd5w"]
+[ext_resource type="Texture2D" uid="uid://b8q4v22x4kyhb" path="res://sprites/red_vignette.png" id="15_5fwrv"]
+[ext_resource type="Script" uid="uid://c6ljgl8lgc6kk" path="res://scripts/lv4_world_manager.gd" id="16_5fwrv"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2hef4"]
+
+[sub_resource type="Animation" id="Animation_ycko3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_x7blo"]
+resource_name = "dimension_transition"
+length = 0.16666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05228368, 0.15730965),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.93333334), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e3utc"]
+_data = {
+&"RESET": SubResource("Animation_ycko3"),
+&"dimension_transition": SubResource("Animation_x7blo")
+}
+
+[sub_resource type="Animation" id="Animation_qsmat"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Vignette:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_yk4f3"]
+resource_name = "cooldown_end"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Vignette:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.84313726), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_cp0rv"]
+resource_name = "cooldown_start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Vignette:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.07703127),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.84313726)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ymwnx"]
+_data = {
+&"RESET": SubResource("Animation_qsmat"),
+&"cooldown_end": SubResource("Animation_yk4f3"),
+&"cooldown_start": SubResource("Animation_cp0rv")
+}
+
+[sub_resource type="Animation" id="Animation_rr1tt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Vignette_Red:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7ewpb"]
+resource_name = "red_vignette_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Vignette_Red:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.52156866)]
+}
+
+[sub_resource type="Animation" id="Animation_py6g0"]
+resource_name = "red_vignette_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Vignette_Red:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0011530012, 0.30900434),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.52156866), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_adfb8"]
+_data = {
+&"RESET": SubResource("Animation_rr1tt"),
+&"red_vignette_in": SubResource("Animation_7ewpb"),
+&"red_vignette_out": SubResource("Animation_py6g0")
+}
 
 [node name="level_6" type="Node2D" unique_id=1108429124]
 
@@ -24,6 +168,7 @@
 motion_mirroring = Vector2(1200, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1834796031]
+texture_filter = 1
 position = Vector2(645, 302)
 scale = Vector2(1.4520807, 1.4520807)
 texture = ExtResource("1_abjnl")
@@ -66,7 +211,7 @@ texture = ExtResource("5_hrd5w")
 
 [node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1966549801]
 motion_scale = Vector2(0.2, 1)
-motion_mirroring = Vector2(1200, 0)
+motion_mirroring = Vector2(1300, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer7" unique_id=48308418]
 texture_filter = 1
@@ -83,7 +228,8 @@ position = Vector2(407, 92)
 texture = ExtResource("7_e3utc")
 
 [node name="ParallaxLayer9" type="ParallaxLayer" parent="ParallaxBackground" unique_id=55882656]
-motion_mirroring = Vector2(1200, 0)
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(1300, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer9" unique_id=2107033673]
 texture_filter = 1
@@ -110,7 +256,7 @@ scale = Vector2(1.388662, 1.2730138)
 texture = ExtResource("10_j7y2l")
 
 [node name="ParallaxLayer12" type="ParallaxLayer" parent="ParallaxBackground" unique_id=810063296]
-motion_mirroring = Vector2(1200, 0)
+motion_mirroring = Vector2(1350, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer12" unique_id=1066420352]
 texture_filter = 1
@@ -144,7 +290,52 @@ position = Vector2(549, 481)
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=858754722]
 position = Vector2(50, 2)
 zoom = Vector2(2, 2)
-limit_left = -93
+limit_left = 0
 limit_top = 6
 limit_right = 2377
 limit_bottom = 640
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=253381916]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=2033790097]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="DimensionTransition" type="AnimationPlayer" parent="CanvasLayer" unique_id=454194685]
+root_node = NodePath("../ColorRect")
+libraries/ = SubResource("AnimationLibrary_e3utc")
+
+[node name="Vignette" type="TextureRect" parent="CanvasLayer" unique_id=1022962065]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = -16.0
+offset_right = 24.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_hrd5w")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=947515293]
+libraries/ = SubResource("AnimationLibrary_ymwnx")
+
+[node name="Vignette_Red" type="TextureRect" parent="CanvasLayer" unique_id=1446565628]
+modulate = Color(1, 1, 1, 0)
+offset_left = -8.0
+offset_top = -6.0
+offset_right = 1292.0
+offset_bottom = 722.0
+texture = ExtResource("15_5fwrv")
+expand_mode = 1
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="CanvasLayer" unique_id=1192585352]
+libraries/ = SubResource("AnimationLibrary_adfb8")
+
+[node name="WorldManager" type="Node2D" parent="." unique_id=880464223]
+script = ExtResource("16_5fwrv")

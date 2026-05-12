@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b2eqkxfkmkgwp"]
+
+[ext_resource type="Script" uid="uid://hnrsqnu1dd0f" path="res://scenes/fading_platform.gd" id="1_y0oj4"]
+[ext_resource type="Texture2D" uid="uid://byrq5cdddpbe4" path="res://sprites/dungeon_sidescroller-Raou/Tilesetv3.png" id="2_2yl8x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2yl8x"]
+size = Vector2(42, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vk7hf"]
+size = Vector2(42, 8)
+
+[node name="Sprite2D" type="Sprite2D" unique_id=1759857888]
+texture_filter = 1
+texture = ExtResource("2_2yl8x")
+region_enabled = true
+region_rect = Rect2(144.41183, 142.79903, 46.557724, 12.901413)
+script = ExtResource("1_y0oj4")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1508256606]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1050101897]
+shape = SubResource("RectangleShape2D_2yl8x")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1507311614]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1995343630]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_vk7hf")

@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cweskif62ydk3"]
+
+[ext_resource type="Script" uid="uid://cypc0xwvrlcf4" path="res://scripts/fadeplatform.gd" id="1_ep6g8"]
+[ext_resource type="Texture2D" uid="uid://byrq5cdddpbe4" path="res://sprites/dungeon_sidescroller-Raou/Tilesetv3.png" id="2_xmbiu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_duju7"]
+size = Vector2(43, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1yv1q"]
+size = Vector2(44, 12)
+
+[node name="Fadeplatform" type="StaticBody2D" unique_id=1809105026]
+script = ExtResource("1_ep6g8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2051112844]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_duju7")
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2038555737]
+texture_filter = 1
+texture = ExtResource("2_xmbiu")
+region_enabled = true
+region_rect = Rect2(144.4444, 142.44637, 48.431885, 12.281769)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1684441395]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1402763075]
+position = Vector2(-2, -1)
+shape = SubResource("RectangleShape2D_1yv1q")
+
+[node name="Timer" type="Timer" parent="." unique_id=1005224729]
+wait_time = 0.8
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
