@@ -7,3 +7,5 @@
 sprites/parallax_forest_pack[[:space:]]web/__MACOSX/parallax_forest_pack[[:space:]]web/v1/._layers filter=lfs diff=lfs merge=lfs -text
 sprites/parallax_forest_pack[[:space:]]web/__MACOSX/._parallax_forest_pack[[:space:]]web filter=lfs diff=lfs merge=lfs -text
 sprites/parallax_forest_pack[[:space:]]web/__MACOSX/parallax_forest_pack[[:space:]]web/v2/._layers filter=lfs diff=lfs merge=lfs -text
+*.aseprite filter=lfs diff=lfs merge=lfs -text
+*.gif filter=lfs diff=lfs merge=lfs -text
