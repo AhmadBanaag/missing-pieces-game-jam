@@ -45,6 +45,8 @@ func _physics_process(delta: float) -> void:
 	else:
 		_sprite.animation = "jump"
 		
+		
+
 	
 
 
