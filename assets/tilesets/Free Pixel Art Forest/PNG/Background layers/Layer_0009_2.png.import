@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmxrvfovxb5n8"
-path="res://.godot/imported/Tilesetv3.png-66a287433147e4f81dd12476e7864250.ctex"
+uid="uid://dnw47um2uvgub"
+path="res://.godot/imported/Layer_0009_2.png-b54672cab5b7eeaee96ce8ba16779c29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dungeon_sidescroller-Raou/Tilesetv3.png"
-dest_files=["res://.godot/imported/Tilesetv3.png-66a287433147e4f81dd12476e7864250.ctex"]
+source_file="res://assets/tilesets/Free Pixel Art Forest/PNG/Background layers/Layer_0009_2.png"
+dest_files=["res://.godot/imported/Layer_0009_2.png-b54672cab5b7eeaee96ce8ba16779c29.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chs3mnvu2xyla"
-path="res://.godot/imported/spr_torch.png-fe6c67be70d80761d78108ea0e250a97.ctex"
+uid="uid://c64ci3fdcirux"
+path="res://.godot/imported/Layer_0000_9.png-669a96537f24ac94f778b0edaf7e51bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dungeon_sidescroller-Raou/spr_torch.png"
-dest_files=["res://.godot/imported/spr_torch.png-fe6c67be70d80761d78108ea0e250a97.ctex"]
+source_file="res://assets/tilesets/Free Pixel Art Forest/PNG/Background layers/Layer_0000_9.png"
+dest_files=["res://.godot/imported/Layer_0000_9.png-669a96537f24ac94f778b0edaf7e51bb.ctex"]
 
 [params]
 
