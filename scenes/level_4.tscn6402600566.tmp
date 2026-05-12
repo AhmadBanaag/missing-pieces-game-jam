@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://pwfjqlc6sbxd" path="res://scenes/player.tscn" id="5_wom6i"]
 [ext_resource type="Script" uid="uid://c6ljgl8lgc6kk" path="res://scripts/lv4_world_manager.gd" id="6_ycko3"]
 [ext_resource type="Texture2D" uid="uid://bn2angvg77rto" path="res://sprites/Vignette.png" id="8_qsmat"]
-[ext_resource type="Texture2D" uid="uid://b8q4v22x4kyhb" path="res://sprites/red_vignette.png" id="9_yk4f3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6j14n"]
 texture = ExtResource("1_huvaw")
@@ -875,58 +874,6 @@ _data = {
 &"cooldown_start": SubResource("Animation_cp0rv")
 }
 
-[sub_resource type="Animation" id="Animation_rr1tt"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Vignette_Red:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_7ewpb"]
-resource_name = "red_vignette_in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Vignette_Red:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.52156866)]
-}
-
-[sub_resource type="Animation" id="Animation_py6g0"]
-resource_name = "red_vignette_out"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Vignette_Red:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.0011530012, 0.30900434),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0.52156866), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_g31h8"]
-_data = {
-&"RESET": SubResource("Animation_rr1tt"),
-&"red_vignette_in": SubResource("Animation_7ewpb"),
-&"red_vignette_out": SubResource("Animation_py6g0")
-}
-
 [node name="Level4" type="Node2D" unique_id=515197180]
 script = ExtResource("1_rbbjd")
 
@@ -1035,15 +982,3 @@ texture = ExtResource("8_qsmat")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=2030201805]
 libraries/ = SubResource("AnimationLibrary_rr1tt")
-
-[node name="Vignette_Red" type="TextureRect" parent="CanvasLayer" unique_id=75795252]
-modulate = Color(1, 1, 1, 0)
-offset_left = -8.0
-offset_top = -6.0
-offset_right = 1292.0
-offset_bottom = 722.0
-texture = ExtResource("9_yk4f3")
-expand_mode = 1
-
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="CanvasLayer" unique_id=529645505]
-libraries/ = SubResource("AnimationLibrary_g31h8")
