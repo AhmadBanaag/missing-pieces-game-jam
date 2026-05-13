@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://db6tq7j7yucve" path="res://scripts/interatible_object.gd" id="1_cy6kx"]
 [ext_resource type="Texture2D" uid="uid://i4vv0avns3hp" path="res://sprites/Item Sprites.png" id="2_6l4gt"]
 [ext_resource type="FontFile" uid="uid://7qafigy5wq67" path="res://sprites/yoster.ttf" id="3_6l4gt"]
+[ext_resource type="Texture2D" uid="uid://cjkw0b7mbyh4u" path="res://sprites/Page1.png" id="3_urkuc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_urkuc"]
 radius = 22.203604
@@ -26,19 +27,26 @@ shape = SubResource("CircleShape2D_urkuc")
 process_mode = 3
 
 [node name="LetterUI" type="TextureRect" parent="CanvasLayer" unique_id=1516655554]
+texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 405.0
+offset_top = 35.0
+offset_right = -405.0
+offset_bottom = -108.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_6l4gt")
+texture = ExtResource("3_urkuc")
 
 [node name="NextHint" type="Label" parent="CanvasLayer" unique_id=767856198]
-offset_left = 515.0
+texture_filter = 1
+offset_left = 458.0
 offset_top = 661.0
-offset_right = 668.0
+offset_right = 839.0
 offset_bottom = 684.0
-text = "Press Enter to continue to the next level"
+theme_override_fonts/font = ExtResource("3_6l4gt")
+text = "Press [Enter] to continue to the next level"
 
 [node name="Label" type="Label" parent="." unique_id=632078037]
 offset_left = -81.0
@@ -46,7 +54,7 @@ offset_top = -56.0
 offset_right = 96.0
 offset_bottom = -33.0
 theme_override_fonts/font = ExtResource("3_6l4gt")
-text = "[ S ] Read"
+text = "[ S ] Get Diary Page"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

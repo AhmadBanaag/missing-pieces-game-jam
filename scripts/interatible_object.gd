@@ -3,9 +3,11 @@ extends Area2D
 ## Stand in range: [interact] (S) opens the read UI. After it appears: [advance_read] (Enter) loads the next level.
 ## Auto next level: finds a host scene named [code]level_N.tscn[/code] on this node's parents (or current scene), then loads [code]level_(N+1).tscn[/code] in the same folder.
 ## Works when the level is instanced under [code]main.tscn[/code] — not only when the level is the run scene.
-## Set [code]next_level_scene[/code] in the inspector to force a specific path.
+## Diary art: host [code]level_N.tscn[/code] maps to [code]Page(N-1).png[/code]: level_2→Page1, level_3→Page2, … level_6→Page5 ([code]Page 5.png[/code] or [code]Page5.png[/code]). Levels below 2 keep the scene default texture. Override with [code]diary_page_texture[/code].
 
 @export var next_level_scene: String = "" ## Optional override. Empty = auto level_N → level_(N+1).
+@export var diary_page_texture: Texture2D ## If set, always show this texture instead of auto PageN.
+@export var diary_sprites_folder: String = "res://sprites" ## Page1.png … Page5.png (Page 5.png allowed).
 
 var player_in_range := false
 var reading_letter := false
@@ -23,6 +25,7 @@ func _ready() -> void:
 	letter_ui.visible = false
 	next_hint.visible = false
 	letter_ui.scale = Vector2(0.2, 0.2)
+	_apply_diary_page_texture()
 	_cached_next_path = _resolve_next_level_path()
 	if _cached_next_path.is_empty():
 		push_warning(
@@ -56,6 +59,52 @@ func _host_level_scene_path() -> String:
 		if not cp.is_empty() and _level_number_from_filename(cp.get_file()) >= 0:
 			return cp
 	return ""
+
+
+func _diary_texture_path_for_page_number(page_num: int) -> String:
+	var base := diary_sprites_folder.strip_edges()
+	if base.is_empty():
+		base = "res://sprites"
+	var candidates: PackedStringArray = PackedStringArray()
+	if page_num == 5:
+		candidates.append("%s/Page 5.png" % base)
+		candidates.append("%s/Page5.png" % base)
+	elif page_num >= 1:
+		candidates.append("%s/Page%d.png" % [base, page_num])
+		candidates.append("%s/page%d.png" % [base, page_num])
+	for p in candidates:
+		if ResourceLoader.exists(p):
+			return p
+	return ""
+
+
+func _apply_diary_page_texture() -> void:
+	if diary_page_texture != null:
+		letter_ui.texture = diary_page_texture
+		return
+
+	var host := _host_level_scene_path()
+	if host.is_empty():
+		return
+	var level_n := _level_number_from_filename(host.get_file())
+	if level_n < 2:
+		return
+
+	var page_num := level_n - 1
+
+	var tex_path := _diary_texture_path_for_page_number(page_num)
+	if tex_path.is_empty():
+		push_warning(
+			"InteratibleObject: no diary image for level_%d (expects Page%d) under %s"
+			% [level_n, page_num, diary_sprites_folder]
+		)
+		return
+
+	var tex: Texture2D = load(tex_path) as Texture2D
+	if tex != null:
+		letter_ui.texture = tex
+	else:
+		push_warning("InteratibleObject: could not load %s" % tex_path)
 
 
 func _resolve_next_level_path() -> String:

@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://bn2angvg77rto" path="res://sprites/Vignette.png" id="14_hrd5w"]
 [ext_resource type="Texture2D" uid="uid://b8q4v22x4kyhb" path="res://sprites/red_vignette.png" id="15_5fwrv"]
 [ext_resource type="Script" uid="uid://c6ljgl8lgc6kk" path="res://scripts/lv4_world_manager.gd" id="16_5fwrv"]
+[ext_resource type="PackedScene" uid="uid://dyv2prqs3i8b4" path="res://scenes/interatible_object.tscn" id="17_e3utc"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2hef4"]
 
@@ -361,3 +362,6 @@ libraries/ = SubResource("AnimationLibrary_adfb8")
 
 [node name="WorldManager" type="Node2D" parent="." unique_id=880464223]
 script = ExtResource("16_5fwrv")
+
+[node name="InteratibleObject" parent="." unique_id=1602204698 instance=ExtResource("17_e3utc")]
+position = Vector2(2335, 500)

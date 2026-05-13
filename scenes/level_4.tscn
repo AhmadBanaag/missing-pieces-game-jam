@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://bn2angvg77rto" path="res://sprites/Vignette.png" id="8_qsmat"]
 [ext_resource type="Texture2D" uid="uid://b8q4v22x4kyhb" path="res://sprites/red_vignette.png" id="9_yk4f3"]
 [ext_resource type="PackedScene" uid="uid://b8d4gmhfmxcyq" path="res://scenes/spike.tscn" id="10_cp0rv"]
-[ext_resource type="PackedScene" uid="uid://cweskif62ydk3" path="res://scenes/fadeplatform.tscn" id="11_rr1tt"]
 [ext_resource type="PackedScene" uid="uid://ddnvoprkdx0iv" path="res://scenes/torch.tscn" id="12_7ewpb"]
 [ext_resource type="PackedScene" uid="uid://dyv2prqs3i8b4" path="res://scenes/interatible_object.tscn" id="13_py6g0"]
 
@@ -991,6 +990,10 @@ layer_3/tile_data = PackedInt32Array(65540, 327680, 6, 65541, 393216, 6, 131076,
 position = Vector2(964.00006, 578)
 scale = Vector2(1.5, 1.5)
 
+[node name="platform2" parent="MirrorWorld" unique_id=1325217353 instance=ExtResource("3_6j14n")]
+position = Vector2(963.00006, 475.00003)
+scale = Vector2(1.5, 1.5)
+
 [node name="platform3" parent="MirrorWorld" unique_id=2069761307 instance=ExtResource("3_6j14n")]
 position = Vector2(145, 297)
 scale = Vector2(1.5, 1.5)
@@ -1046,10 +1049,6 @@ scale = Vector2(2, 2)
 [node name="Area2D12" parent="MirrorWorld" unique_id=2005900639 instance=ExtResource("10_cp0rv")]
 position = Vector2(806, 657)
 scale = Vector2(2, 2)
-
-[node name="Fadeplatform" parent="MirrorWorld" unique_id=1809105026 instance=ExtResource("11_rr1tt")]
-position = Vector2(967.00006, 491)
-scale = Vector2(1.5, 1.5)
 
 [node name="player" parent="." unique_id=1240685424 instance=ExtResource("5_wom6i")]
 position = Vector2(1122, 599)
@@ -1115,4 +1114,4 @@ position = Vector2(397, 561)
 scale = Vector2(2.8333333, 2.8333333)
 
 [node name="InteratibleObject" parent="." unique_id=1602204698 instance=ExtResource("13_py6g0")]
-position = Vector2(1177, 624)
+position = Vector2(1106, 237)
