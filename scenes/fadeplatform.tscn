@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cweskif62ydk3"]
 
 [ext_resource type="Script" uid="uid://cypc0xwvrlcf4" path="res://scripts/fadeplatform.gd" id="1_ep6g8"]
-[ext_resource type="Texture2D" uid="uid://byrq5cdddpbe4" path="res://sprites/dungeon_sidescroller-Raou/Tilesetv3.png" id="2_xmbiu"]
+[ext_resource type="Texture2D" uid="uid://byrq5cdddpbe4" path="res://assets/dungeon_sidescroller-Raou/Tilesetv3.png" id="2_xmbiu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_duju7"]
 size = Vector2(43, 10)

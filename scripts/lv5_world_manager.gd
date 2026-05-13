@@ -30,6 +30,7 @@ func _ready():
 
 func trigger_break():
 
+	GameSfx.play_death()
 	get_tree().reload_current_scene()
 	
 func check_stability():
@@ -58,6 +59,7 @@ func _input(event):
 func switch_dimension():
 	#For Timer
 	can_switch = false
+	GameSfx.play_dimension_change()
 	#Shaking of Camera
 	$"../player/CameraLv_5".apply_shake()
 	#For playing transition

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://08u3jusuqecc"
+path="res://.godot/imported/metal_blunt_tap.wav-70715e900c3c15b85be59c85f67c5c16.sample"
+
+[deps]
+
+source_file="res://sounds/400 Sounds Pack/Materials/metal_blunt_tap.wav"
+dest_files=["res://.godot/imported/metal_blunt_tap.wav-70715e900c3c15b85be59c85f67c5c16.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

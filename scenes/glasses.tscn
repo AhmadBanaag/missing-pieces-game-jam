@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c6qk04e5vh0yw"]
+
+[ext_resource type="Script" path="res://scripts/glasses.gd" id="1_0o1w6"]
+[ext_resource type="Texture2D" uid="uid://dg2obp043eix5" path="res://assets/sprites/Item Sprites.png" id="1_roxpc"]
+[ext_resource type="FontFile" uid="uid://7qafigy5wq67" path="res://assets/yoster.ttf" id="2_0o1w6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_44wtk"]
+radius = 40.311287
+
+[node name="Glasses" type="Area2D" unique_id=2006719797 groups=["player"]]
+collision_mask = 2
+script = ExtResource("1_0o1w6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=898045658]
+texture = ExtResource("1_roxpc")
+region_enabled = true
+region_rect = Rect2(230, 274, 19, 11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=364887070]
+shape = SubResource("CircleShape2D_44wtk")
+
+[node name="PickupLabel" type="Label" parent="." unique_id=1526593012]
+offset_left = -26.0
+offset_top = -23.0
+offset_right = 31.0
+offset_bottom = -13.0
+theme_override_fonts/font = ExtResource("2_0o1w6")
+theme_override_font_sizes/font_size = 9
+text = "[S] Pick Up"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

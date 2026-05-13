@@ -42,6 +42,7 @@ func _ready() -> void:
 
 
 func trigger_break() -> void:
+	GameSfx.play_death()
 	get_tree().reload_current_scene()
 
 
@@ -76,6 +77,7 @@ func switch_dimension() -> void:
 		return
 
 	can_switch = false
+	GameSfx.play_dimension_change()
 	if camera and camera.has_method("apply_shake"):
 		camera.apply_shake()
 

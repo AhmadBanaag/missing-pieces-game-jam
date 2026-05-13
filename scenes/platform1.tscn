@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://2kgjtlpa1ok5"]
 
-[ext_resource type="Texture2D" uid="uid://byrq5cdddpbe4" path="res://sprites/dungeon_sidescroller-Raou/Tilesetv3.png" id="1_luvg2"]
+[ext_resource type="Texture2D" uid="uid://byrq5cdddpbe4" path="res://assets/dungeon_sidescroller-Raou/Tilesetv3.png" id="1_luvg2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_507t5"]
 size = Vector2(48, 8)

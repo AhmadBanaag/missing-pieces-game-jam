@@ -1,20 +1,20 @@
 [gd_scene format=3 uid="uid://lf0jpe1imukl"]
 
-[ext_resource type="Texture2D" uid="uid://y4m8do8t3cuv" path="res://sprites/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0011_0.png" id="1_abjnl"]
-[ext_resource type="Texture2D" uid="uid://cpep34kys04kf" path="res://sprites/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0010_1.png" id="2_wps6d"]
-[ext_resource type="Texture2D" uid="uid://ckabahmbcd7yn" path="res://sprites/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0009_2.png" id="3_2hef4"]
-[ext_resource type="Texture2D" uid="uid://be7kqtq1xak1m" path="res://sprites/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0008_3.png" id="4_lk3oq"]
-[ext_resource type="Texture2D" uid="uid://docetjt55axf8" path="res://sprites/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0006_4.png" id="5_hrd5w"]
-[ext_resource type="Texture2D" uid="uid://crfdqaifxg4jl" path="res://sprites/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0005_5.png" id="6_5fwrv"]
-[ext_resource type="Texture2D" uid="uid://dcsp5j2b85erm" path="res://sprites/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0004_Lights.png" id="7_e3utc"]
-[ext_resource type="Texture2D" uid="uid://dvgxbmd35dqyg" path="res://sprites/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0003_6.png" id="8_ymwnx"]
-[ext_resource type="Texture2D" uid="uid://bs3nacd0u8yl0" path="res://sprites/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0002_7.png" id="9_adfb8"]
-[ext_resource type="Texture2D" uid="uid://c2pickm2gugu3" path="res://sprites/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0001_8.png" id="10_j7y2l"]
-[ext_resource type="Texture2D" uid="uid://naypi6unfi20" path="res://sprites/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0000_9.png" id="11_epfji"]
-[ext_resource type="Texture2D" uid="uid://bsg1my2gu60bp" path="res://sprites/parallax_forest_pack web/parallax_forest_pack web/v2/layers/front.png" id="12_wps6d"]
+[ext_resource type="Texture2D" uid="uid://y4m8do8t3cuv" path="res://assets/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0011_0.png" id="1_abjnl"]
+[ext_resource type="Texture2D" uid="uid://cpep34kys04kf" path="res://assets/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0010_1.png" id="2_wps6d"]
+[ext_resource type="Texture2D" uid="uid://ckabahmbcd7yn" path="res://assets/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0009_2.png" id="3_2hef4"]
+[ext_resource type="Texture2D" uid="uid://be7kqtq1xak1m" path="res://assets/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0008_3.png" id="4_lk3oq"]
+[ext_resource type="Texture2D" uid="uid://docetjt55axf8" path="res://assets/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0006_4.png" id="5_hrd5w"]
+[ext_resource type="Texture2D" uid="uid://crfdqaifxg4jl" path="res://assets/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0005_5.png" id="6_5fwrv"]
+[ext_resource type="Texture2D" uid="uid://dcsp5j2b85erm" path="res://assets/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0004_Lights.png" id="7_e3utc"]
+[ext_resource type="Texture2D" uid="uid://dvgxbmd35dqyg" path="res://assets/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0003_6.png" id="8_ymwnx"]
+[ext_resource type="Texture2D" uid="uid://bs3nacd0u8yl0" path="res://assets/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0002_7.png" id="9_adfb8"]
+[ext_resource type="Texture2D" uid="uid://c2pickm2gugu3" path="res://assets/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0001_8.png" id="10_j7y2l"]
+[ext_resource type="Texture2D" uid="uid://naypi6unfi20" path="res://assets/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0000_9.png" id="11_epfji"]
+[ext_resource type="Texture2D" uid="uid://bsg1my2gu60bp" path="res://assets/parallax_forest_pack web/parallax_forest_pack web/v2/layers/front.png" id="12_wps6d"]
 [ext_resource type="PackedScene" uid="uid://pwfjqlc6sbxd" path="res://scenes/player.tscn" id="13_2hef4"]
-[ext_resource type="Texture2D" uid="uid://bn2angvg77rto" path="res://sprites/Vignette.png" id="14_hrd5w"]
-[ext_resource type="Texture2D" uid="uid://b8q4v22x4kyhb" path="res://sprites/red_vignette.png" id="15_5fwrv"]
+[ext_resource type="Texture2D" uid="uid://bn2angvg77rto" path="res://assets/Vignette.png" id="14_hrd5w"]
+[ext_resource type="Texture2D" uid="uid://b8q4v22x4kyhb" path="res://assets/red_vignette.png" id="15_5fwrv"]
 [ext_resource type="Script" uid="uid://c6ljgl8lgc6kk" path="res://scripts/lv4_world_manager.gd" id="16_5fwrv"]
 [ext_resource type="PackedScene" uid="uid://dyv2prqs3i8b4" path="res://scenes/interatible_object.tscn" id="17_e3utc"]
 
@@ -364,4 +364,4 @@ libraries/ = SubResource("AnimationLibrary_adfb8")
 script = ExtResource("16_5fwrv")
 
 [node name="InteratibleObject" parent="." unique_id=1602204698 instance=ExtResource("17_e3utc")]
-position = Vector2(2335, 500)
+position = Vector2(2251, 496)

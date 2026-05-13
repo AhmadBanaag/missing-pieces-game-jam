@@ -4,16 +4,20 @@ extends Area2D
 ## Auto next level: finds a host scene named [code]level_N.tscn[/code] on this node's parents (or current scene), then loads [code]level_(N+1).tscn[/code] in the same folder.
 ## Works when the level is instanced under [code]main.tscn[/code] — not only when the level is the run scene.
 ## Diary art: host [code]level_N.tscn[/code] maps to [code]Page(N-1).png[/code]: level_2→Page1, level_3→Page2, … level_6→Page5 ([code]Page 5.png[/code] or [code]Page5.png[/code]). Levels below 2 keep the scene default texture. Override with [code]diary_page_texture[/code].
+## Plays [code]Book Page 1-2.wav[/code] when the player opens the diary ([code]interact[/code]). Override via [code]diary_pickup_sound[/code] / [code]diary_pickup_sound_path[/code].
 
 @export var next_level_scene: String = "" ## Optional override. Empty = auto level_N → level_(N+1).
 @export var diary_page_texture: Texture2D ## If set, always show this texture instead of auto PageN.
 @export var diary_sprites_folder: String = "res://sprites" ## Page1.png … Page5.png (Page 5.png allowed).
+@export var diary_pickup_sound: AudioStream ## If set, used when opening the diary. Otherwise loads [code]diary_pickup_sound_path[/code].
+@export var diary_pickup_sound_path: String = "res://sounds/(Not A Placeholder) Free Sounds Pack/Free Sounds Pack/Book Page 1-2.wav"
 
 var player_in_range := false
 var reading_letter := false
 var can_proceed_to_next_level := false
 
 var _cached_next_path: String = ""
+var _pickup_audio: AudioStreamPlayer
 
 @onready var pickup_label: Label = $Label
 @onready var letter_ui: TextureRect = $CanvasLayer/LetterUI
@@ -25,6 +29,7 @@ func _ready() -> void:
 	letter_ui.visible = false
 	next_hint.visible = false
 	letter_ui.scale = Vector2(0.2, 0.2)
+	_setup_diary_pickup_audio()
 	_apply_diary_page_texture()
 	_cached_next_path = _resolve_next_level_path()
 	if _cached_next_path.is_empty():
@@ -107,6 +112,28 @@ func _apply_diary_page_texture() -> void:
 		push_warning("InteratibleObject: could not load %s" % tex_path)
 
 
+func _setup_diary_pickup_audio() -> void:
+	_pickup_audio = AudioStreamPlayer.new()
+	_pickup_audio.name = "DiaryPagePickupAudio"
+	add_child(_pickup_audio)
+
+	var stream: AudioStream = diary_pickup_sound
+	if stream == null:
+		var p := diary_pickup_sound_path.strip_edges()
+		if not p.is_empty() and ResourceLoader.exists(p):
+			stream = load(p) as AudioStream
+	if stream == null:
+		push_warning("InteratibleObject: diary pickup sound not found (assign diary_pickup_sound or check diary_pickup_sound_path).")
+		return
+	_pickup_audio.stream = stream
+
+
+func _play_diary_pickup_sound() -> void:
+	if _pickup_audio == null or _pickup_audio.stream == null:
+		return
+	_pickup_audio.play()
+
+
 func _resolve_next_level_path() -> String:
 	var manual := next_level_scene.strip_edges()
 	if not manual.is_empty():
@@ -159,6 +186,7 @@ func _is_advance_read_pressed() -> bool:
 func open_letter() -> void:
 	reading_letter = true
 	can_proceed_to_next_level = false
+	_play_diary_pickup_sound()
 	pickup_label.visible = false
 	letter_ui.visible = true
 	letter_ui.scale = Vector2(0.2, 0.2)

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ddnvoprkdx0iv"]
 
-[ext_resource type="Texture2D" uid="uid://cb2216rsfwq7n" path="res://sprites/dungeon_sidescroller-Raou/spr_torch.png" id="1_d4v33"]
+[ext_resource type="Texture2D" uid="uid://cb2216rsfwq7n" path="res://assets/dungeon_sidescroller-Raou/spr_torch.png" id="1_d4v33"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_my26j"]
 atlas = ExtResource("1_d4v33")

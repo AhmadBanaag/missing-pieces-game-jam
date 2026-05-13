@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dgxmwkflfgkua"
+path="res://.godot/imported/Underwater 01.wav-da604f4fc03cfc31eea8d13165094cad.sample"
+
+[deps]
+
+source_file="res://sounds/(Not A Placeholder) Free Sounds Pack/Free Sounds Pack/Underwater 01.wav"
+dest_files=["res://.godot/imported/Underwater 01.wav-da604f4fc03cfc31eea8d13165094cad.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

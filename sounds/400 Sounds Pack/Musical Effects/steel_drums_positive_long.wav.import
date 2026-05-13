@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b8qs67m3o0u56"
+path="res://.godot/imported/steel_drums_positive_long.wav-ce1bab22f84c4d65b44171c9ac1e53d1.sample"
+
+[deps]
+
+source_file="res://sounds/400 Sounds Pack/Musical Effects/steel_drums_positive_long.wav"
+dest_files=["res://.godot/imported/steel_drums_positive_long.wav-ce1bab22f84c4d65b44171c9ac1e53d1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

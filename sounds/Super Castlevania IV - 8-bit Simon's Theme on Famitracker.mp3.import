@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bhmcco31dgc22"
+path="res://.godot/imported/Super Castlevania IV - 8-bit Simon's Theme on Famitracker.mp3-47f107d4132784d27a0d341e36f80b48.mp3str"
+
+[deps]
+
+source_file="res://sounds/Super Castlevania IV - 8-bit Simon's Theme on Famitracker.mp3"
+dest_files=["res://.godot/imported/Super Castlevania IV - 8-bit Simon's Theme on Famitracker.mp3-47f107d4132784d27a0d341e36f80b48.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c704fmsrv5qjb"]
+
+[ext_resource type="Script" uid="uid://c62xtj4xuoyx1" path="res://scripts/level_7.gd" id="1_cjsqb"]
+[ext_resource type="FontFile" uid="uid://7qafigy5wq67" path="res://assets/yoster.ttf" id="2_5u80n"]
+
+[node name="ending" type="Node2D" unique_id=1150670654]
+script = ExtResource("1_cjsqb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2102216371]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=430730170]
+offset_left = -10.0
+offset_top = -5.0
+offset_right = 1281.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=118311157]
+offset_left = 730.0
+offset_top = 610.0
+offset_right = 1221.0
+offset_bottom = 669.0
+theme_override_fonts/font = ExtResource("2_5u80n")
+theme_override_font_sizes/font_size = 50
+text = "The Missing Pieces"

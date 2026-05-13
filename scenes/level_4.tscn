@@ -1,17 +1,18 @@
 [gd_scene format=3 uid="uid://3bwn3yoayu8y"]
 
-[ext_resource type="Texture2D" uid="uid://byrq5cdddpbe4" path="res://sprites/dungeon_sidescroller-Raou/Tilesetv3.png" id="1_huvaw"]
+[ext_resource type="Texture2D" uid="uid://byrq5cdddpbe4" path="res://assets/dungeon_sidescroller-Raou/Tilesetv3.png" id="1_huvaw"]
 [ext_resource type="Script" uid="uid://c3gyum45b6lqk" path="res://scripts/level_4.gd" id="1_rbbjd"]
-[ext_resource type="Texture2D" uid="uid://cb2216rsfwq7n" path="res://sprites/dungeon_sidescroller-Raou/spr_torch.png" id="2_6malg"]
+[ext_resource type="Texture2D" uid="uid://cb2216rsfwq7n" path="res://assets/dungeon_sidescroller-Raou/spr_torch.png" id="2_6malg"]
 [ext_resource type="Script" uid="uid://16qsqv58iemm" path="res://scripts/camera_lv_4.gd" id="2_x7blo"]
 [ext_resource type="PackedScene" uid="uid://2kgjtlpa1ok5" path="res://scenes/platform1.tscn" id="3_6j14n"]
 [ext_resource type="PackedScene" uid="uid://pwfjqlc6sbxd" path="res://scenes/player.tscn" id="5_wom6i"]
 [ext_resource type="Script" uid="uid://c6ljgl8lgc6kk" path="res://scripts/lv4_world_manager.gd" id="6_ycko3"]
-[ext_resource type="Texture2D" uid="uid://bn2angvg77rto" path="res://sprites/Vignette.png" id="8_qsmat"]
-[ext_resource type="Texture2D" uid="uid://b8q4v22x4kyhb" path="res://sprites/red_vignette.png" id="9_yk4f3"]
+[ext_resource type="Texture2D" uid="uid://bn2angvg77rto" path="res://assets/Vignette.png" id="8_qsmat"]
+[ext_resource type="Texture2D" uid="uid://b8q4v22x4kyhb" path="res://assets/red_vignette.png" id="9_yk4f3"]
 [ext_resource type="PackedScene" uid="uid://b8d4gmhfmxcyq" path="res://scenes/spike.tscn" id="10_cp0rv"]
 [ext_resource type="PackedScene" uid="uid://ddnvoprkdx0iv" path="res://scenes/torch.tscn" id="12_7ewpb"]
 [ext_resource type="PackedScene" uid="uid://dyv2prqs3i8b4" path="res://scenes/interatible_object.tscn" id="13_py6g0"]
+[ext_resource type="Script" uid="uid://d1xq3w2qwb8xw" path="res://scripts/level_bgm.gd" id="14_bgm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6j14n"]
 texture = ExtResource("1_huvaw")
@@ -932,6 +933,10 @@ _data = {
 
 [node name="level_5" type="Node2D" unique_id=515197180]
 script = ExtResource("1_rbbjd")
+
+[node name="LevelBGM" type="Node" parent="." unique_id=9200001]
+script = ExtResource("14_bgm")
+music_path = "res://sounds/New Super Mario Bros. Wii- Tower Boss (VRC6).mp3"
 
 [node name="CameraLv_5" type="Camera2D" parent="." unique_id=2081800957]
 visible = false

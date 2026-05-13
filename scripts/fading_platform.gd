@@ -19,7 +19,8 @@ func _on_body_entered(body):
 		activated = true
 		start_fade()
 		
-func start_fade():
+func start_fade() -> void:
+	GameSfx.play_platform_disappear()
 
 	# small delay before fading
 	await get_tree().create_timer(0.3).timeout

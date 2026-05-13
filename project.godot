@@ -15,6 +15,14 @@ run/main_scene="uid://cy0qxssa45pv8"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://daf6tsqfu8l6e"
+
+[autoload]
+
+GameSfx="*res://scripts/game_sfx.gd"
+
 [display]
 
 window/size/viewport_width=1280

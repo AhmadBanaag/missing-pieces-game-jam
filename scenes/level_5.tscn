@@ -2,17 +2,18 @@
 
 [ext_resource type="Script" uid="uid://c3gyum45b6lqk" path="res://scripts/level_4.gd" id="1_ij176"]
 [ext_resource type="Script" uid="uid://16qsqv58iemm" path="res://scripts/camera_lv_4.gd" id="2_uva14"]
-[ext_resource type="Texture2D" uid="uid://byrq5cdddpbe4" path="res://sprites/dungeon_sidescroller-Raou/Tilesetv3.png" id="3_vqwqk"]
-[ext_resource type="Texture2D" uid="uid://cb2216rsfwq7n" path="res://sprites/dungeon_sidescroller-Raou/spr_torch.png" id="4_1q3ip"]
+[ext_resource type="Texture2D" uid="uid://byrq5cdddpbe4" path="res://assets/dungeon_sidescroller-Raou/Tilesetv3.png" id="3_vqwqk"]
+[ext_resource type="Texture2D" uid="uid://cb2216rsfwq7n" path="res://assets/dungeon_sidescroller-Raou/spr_torch.png" id="4_1q3ip"]
 [ext_resource type="PackedScene" uid="uid://2kgjtlpa1ok5" path="res://scenes/platform1.tscn" id="4_e4ab4"]
 [ext_resource type="PackedScene" uid="uid://pwfjqlc6sbxd" path="res://scenes/player.tscn" id="5_e4ab4"]
 [ext_resource type="PackedScene" uid="uid://b8d4gmhfmxcyq" path="res://scenes/spike.tscn" id="5_xxvx7"]
 [ext_resource type="PackedScene" uid="uid://cweskif62ydk3" path="res://scenes/fadeplatform.tscn" id="6_68hud"]
-[ext_resource type="Texture2D" uid="uid://bn2angvg77rto" path="res://sprites/Vignette.png" id="7_68hud"]
-[ext_resource type="Texture2D" uid="uid://b8q4v22x4kyhb" path="res://sprites/red_vignette.png" id="8_jwrea"]
+[ext_resource type="Texture2D" uid="uid://bn2angvg77rto" path="res://assets/Vignette.png" id="7_68hud"]
+[ext_resource type="Texture2D" uid="uid://b8q4v22x4kyhb" path="res://assets/red_vignette.png" id="8_jwrea"]
 [ext_resource type="Script" uid="uid://bknip6njl52ft" path="res://scripts/lv5_world_manager.gd" id="9_1q3ip"]
 [ext_resource type="PackedScene" uid="uid://ddnvoprkdx0iv" path="res://scenes/torch.tscn" id="12_e4ab4"]
 [ext_resource type="PackedScene" uid="uid://dyv2prqs3i8b4" path="res://scenes/interatible_object.tscn" id="13_xxvx7"]
+[ext_resource type="Script" uid="uid://d1xq3w2qwb8xw" path="res://scripts/level_bgm.gd" id="14_bgm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6j14n"]
 texture = ExtResource("3_vqwqk")
@@ -34,6 +35,7 @@ texture = ExtResource("3_vqwqk")
 0:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -1.3057747, -8, -0.43525887, 0.78346443, 8, 0.60936165, 8, 8, -8, 8)
 4:1/0 = 0
 5:1/0 = 0
 6:1/0 = 0
@@ -969,8 +971,12 @@ _data = {
 &"red_vignette_out": SubResource("Animation_py6g0")
 }
 
-[node name="level_5" type="Node2D" unique_id=515197180]
+[node name="level_6" type="Node2D" unique_id=515197180]
 script = ExtResource("1_ij176")
+
+[node name="LevelBGM" type="Node" parent="." unique_id=9200002]
+script = ExtResource("14_bgm")
+music_path = "res://sounds/Cirno Fortress Stage 1 (Stage 36a) [2A03, FamiTracker].mp3"
 
 [node name="NormalWorld" type="Node2D" parent="." unique_id=1574893734]
 
