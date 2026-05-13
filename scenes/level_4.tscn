@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://b8d4gmhfmxcyq" path="res://scenes/spike.tscn" id="10_cp0rv"]
 [ext_resource type="PackedScene" uid="uid://cweskif62ydk3" path="res://scenes/fadeplatform.tscn" id="11_rr1tt"]
 [ext_resource type="PackedScene" uid="uid://ddnvoprkdx0iv" path="res://scenes/torch.tscn" id="12_7ewpb"]
+[ext_resource type="PackedScene" uid="uid://dyv2prqs3i8b4" path="res://scenes/interatible_object.tscn" id="13_py6g0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6j14n"]
 texture = ExtResource("1_huvaw")
@@ -1112,3 +1113,6 @@ scale = Vector2(2.8333333, 2.8333333)
 [node name="torch3" parent="." unique_id=437200996 instance=ExtResource("12_7ewpb")]
 position = Vector2(397, 561)
 scale = Vector2(2.8333333, 2.8333333)
+
+[node name="InteratibleObject" parent="." unique_id=1602204698 instance=ExtResource("13_py6g0")]
+position = Vector2(1177, 624)

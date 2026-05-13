@@ -162,127 +162,149 @@ _data = {
 
 [node name="level_6" type="Node2D" unique_id=1108429124]
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=847341560]
+[node name="NormalWorld" type="Node2D" parent="." unique_id=9000010]
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1005075690]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="NormalWorld" unique_id=847341560]
+
+[node name="ParallaxBackground#ParallaxLayer" type="ParallaxLayer" parent="NormalWorld/ParallaxBackground" unique_id=1005075690]
 motion_mirroring = Vector2(1200, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1834796031]
+[node name="ParallaxBackground_ParallaxLayer#Sprite2D" type="Sprite2D" parent="NormalWorld/ParallaxBackground/ParallaxBackground#ParallaxLayer" unique_id=1834796031]
 texture_filter = 1
 position = Vector2(645, 302)
 scale = Vector2(1.4520807, 1.4520807)
 texture = ExtResource("1_abjnl")
 
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=358443943]
+[node name="ParallaxBackground#ParallaxLayer2" type="ParallaxLayer" parent="NormalWorld/ParallaxBackground" unique_id=358443943]
 motion_mirroring = Vector2(1200, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" unique_id=898406666]
+[node name="ParallaxBackground_ParallaxLayer2#Sprite2D" type="Sprite2D" parent="NormalWorld/ParallaxBackground/ParallaxBackground#ParallaxLayer2" unique_id=898406666]
 position = Vector2(644.83984, 302.75)
 scale = Vector2(1.4457755, 1.4457755)
 texture = ExtResource("2_wps6d")
 
-[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1824498179]
+[node name="ParallaxBackground#ParallaxLayer4" type="ParallaxLayer" parent="NormalWorld/ParallaxBackground" unique_id=1824498179]
 motion_mirroring = Vector2(1200, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4" unique_id=834607835]
+[node name="ParallaxBackground_ParallaxLayer4#Sprite2D" type="Sprite2D" parent="NormalWorld/ParallaxBackground/ParallaxBackground#ParallaxLayer4" unique_id=834607835]
 texture_filter = 1
 position = Vector2(668.00006, 80.00002)
 scale = Vector2(1.4419924, 1.4419924)
 texture = ExtResource("3_2hef4")
 
-[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground" unique_id=468409331]
+[node name="ParallaxBackground#ParallaxLayer5" type="ParallaxLayer" parent="NormalWorld/ParallaxBackground" unique_id=468409331]
 motion_scale = Vector2(0.1, 1)
 motion_mirroring = Vector2(1200, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5" unique_id=1536171037]
+[node name="ParallaxBackground_ParallaxLayer5#Sprite2D" type="Sprite2D" parent="NormalWorld/ParallaxBackground/ParallaxBackground#ParallaxLayer5" unique_id=1536171037]
 texture_filter = 1
 position = Vector2(849.99994, -38)
 scale = Vector2(1.8994638, 1.8092687)
 texture = ExtResource("4_lk3oq")
 
-[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1050758181]
+[node name="ParallaxBackground#ParallaxLayer6" type="ParallaxLayer" parent="NormalWorld/ParallaxBackground" unique_id=1050758181]
 motion_mirroring = Vector2(1200, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6" unique_id=1687792793]
+[node name="ParallaxBackground_ParallaxLayer6#Sprite2D" type="Sprite2D" parent="NormalWorld/ParallaxBackground/ParallaxBackground#ParallaxLayer6" unique_id=1687792793]
 texture_filter = 1
 position = Vector2(640, 86.99999)
 scale = Vector2(1.3827237, 1.3827237)
 texture = ExtResource("5_hrd5w")
 
-[node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1966549801]
+[node name="ParallaxBackground#ParallaxLayer7" type="ParallaxLayer" parent="NormalWorld/ParallaxBackground" unique_id=1966549801]
 motion_scale = Vector2(0.2, 1)
 motion_mirroring = Vector2(1300, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer7" unique_id=48308418]
+[node name="ParallaxBackground_ParallaxLayer7#Sprite2D" type="Sprite2D" parent="NormalWorld/ParallaxBackground/ParallaxBackground#ParallaxLayer7" unique_id=48308418]
 texture_filter = 1
 position = Vector2(648.49054, 82.43751)
 scale = Vector2(1.4062107, 1.4062104)
 texture = ExtResource("6_5fwrv")
 
-[node name="ParallaxLayer8" type="ParallaxLayer" parent="ParallaxBackground" unique_id=203734096]
+[node name="ParallaxBackground#ParallaxLayer8" type="ParallaxLayer" parent="NormalWorld/ParallaxBackground" unique_id=203734096]
 motion_mirroring = Vector2(1200, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer8" unique_id=1504902972]
+[node name="ParallaxBackground_ParallaxLayer8#Sprite2D" type="Sprite2D" parent="NormalWorld/ParallaxBackground/ParallaxBackground#ParallaxLayer8" unique_id=1504902972]
 texture_filter = 1
 position = Vector2(407, 92)
 texture = ExtResource("7_e3utc")
 
-[node name="ParallaxLayer9" type="ParallaxLayer" parent="ParallaxBackground" unique_id=55882656]
+[node name="ParallaxBackground#ParallaxLayer9" type="ParallaxLayer" parent="NormalWorld/ParallaxBackground" unique_id=55882656]
 motion_scale = Vector2(0.1, 1)
 motion_mirroring = Vector2(1300, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer9" unique_id=2107033673]
+[node name="ParallaxBackground_ParallaxLayer9#Sprite2D" type="Sprite2D" parent="NormalWorld/ParallaxBackground/ParallaxBackground#ParallaxLayer9" unique_id=2107033673]
 texture_filter = 1
 position = Vector2(615, 84)
 scale = Vector2(1.4040039, 1.4040039)
 texture = ExtResource("8_ymwnx")
 
-[node name="ParallaxLayer10" type="ParallaxLayer" parent="ParallaxBackground" unique_id=405358571]
+[node name="ParallaxBackground#ParallaxLayer10" type="ParallaxLayer" parent="NormalWorld/ParallaxBackground" unique_id=405358571]
 motion_mirroring = Vector2(1200, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer10" unique_id=336744995]
+[node name="ParallaxBackground_ParallaxLayer10#Sprite2D" type="Sprite2D" parent="NormalWorld/ParallaxBackground/ParallaxBackground#ParallaxLayer10" unique_id=336744995]
 texture_filter = 1
 position = Vector2(636, 120)
 scale = Vector2(1.4193754, 1.2008197)
 texture = ExtResource("9_adfb8")
 
-[node name="ParallaxLayer11" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1718857711]
+[node name="ParallaxBackground#ParallaxLayer11" type="ParallaxLayer" parent="NormalWorld/ParallaxBackground" unique_id=1718857711]
 motion_mirroring = Vector2(1200, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer11" unique_id=1476353668]
+[node name="ParallaxBackground_ParallaxLayer11#Sprite2D" type="Sprite2D" parent="NormalWorld/ParallaxBackground/ParallaxBackground#ParallaxLayer11" unique_id=1476353668]
 texture_filter = 1
 position = Vector2(643.66077, 119.00001)
 scale = Vector2(1.388662, 1.2730138)
 texture = ExtResource("10_j7y2l")
 
-[node name="ParallaxLayer12" type="ParallaxLayer" parent="ParallaxBackground" unique_id=810063296]
+[node name="ParallaxBackground#ParallaxLayer12" type="ParallaxLayer" parent="NormalWorld/ParallaxBackground" unique_id=810063296]
 motion_mirroring = Vector2(1350, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer12" unique_id=1066420352]
+[node name="ParallaxBackground_ParallaxLayer12#Sprite2D" type="Sprite2D" parent="NormalWorld/ParallaxBackground/ParallaxBackground#ParallaxLayer12" unique_id=1066420352]
 texture_filter = 1
 position = Vector2(664, 113)
 scale = Vector2(1.457262, 1.3376417)
 texture = ExtResource("11_epfji")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=844317865]
+[node name="StaticBody2D" type="StaticBody2D" parent="NormalWorld" unique_id=844317865]
 position = Vector2(-41, 548)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=917016709]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NormalWorld/StaticBody2D" unique_id=917016709]
 shape = SubResource("WorldBoundaryShape2D_2hef4")
 
-[node name="ParallaxBackground2" type="ParallaxBackground" parent="." unique_id=1438033996]
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="NormalWorld" unique_id=1438033996]
 layer = 1
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2" unique_id=679046868]
+[node name="ParallaxBackground2#ParallaxLayer" type="ParallaxLayer" parent="NormalWorld/ParallaxBackground2" unique_id=679046868]
 motion_scale = Vector2(2, 0)
 motion_mirroring = Vector2(1100, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer" unique_id=1926113603]
+[node name="ParallaxBackground2_ParallaxLayer#Sprite2D" type="Sprite2D" parent="NormalWorld/ParallaxBackground2/ParallaxBackground2#ParallaxLayer" unique_id=1926113603]
 texture_filter = 1
 position = Vector2(518, 323)
 scale = Vector2(4.098438, 4.098438)
 texture = ExtResource("12_wps6d")
+
+[node name="MirrorWorld" type="Node2D" parent="." unique_id=9000011]
+visible = false
+
+[node name="MirrorStatic" type="StaticBody2D" parent="MirrorWorld" unique_id=9000012]
+position = Vector2(-41, 548)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MirrorWorld/MirrorStatic" unique_id=9000013]
+shape = SubResource("WorldBoundaryShape2D_2hef4")
+
+[node name="MirrorTint" type="ColorRect" parent="MirrorWorld" unique_id=9000014]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -100.0
+offset_right = 2600.0
+offset_bottom = 900.0
+mouse_filter = 2
+color = Color(0.2, 0.28, 0.45, 0.3)
 
 [node name="CharacterBody2D" parent="." unique_id=1240685424 instance=ExtResource("13_2hef4")]
 position = Vector2(549, 481)

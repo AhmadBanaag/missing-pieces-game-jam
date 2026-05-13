@@ -7,7 +7,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_urkuc"]
 radius = 22.203604
 
-[node name="InteratibleObject" type="Area2D" unique_id=1602204698 groups=["player"]]
+[node name="InteratibleObject" type="Area2D" unique_id=1602204698]
 collision_mask = 3
 script = ExtResource("1_cy6kx")
 
@@ -38,7 +38,7 @@ offset_left = 515.0
 offset_top = 661.0
 offset_right = 668.0
 offset_bottom = 684.0
-text = "Press [S] to Proceed"
+text = "Press Enter to continue to the next level"
 
 [node name="Label" type="Label" parent="." unique_id=632078037]
 offset_left = -81.0
@@ -46,7 +46,7 @@ offset_top = -56.0
 offset_right = 96.0
 offset_bottom = -33.0
 theme_override_fonts/font = ExtResource("3_6l4gt")
-text = "[ S ] Get Diary Page"
+text = "[ S ] Read"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
