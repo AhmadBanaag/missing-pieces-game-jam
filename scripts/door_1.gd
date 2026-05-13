@@ -7,6 +7,12 @@ class_name Door1
 
 @onready var spawn = $Spawn
 
+var enabled: bool = false
+
+func _ready():
+	await get_tree().create_timer(0.3).timeout
+	enabled = true
+
 func _on_body_entered(body: Node2D) -> void:
-	if body is Player:
+	if body is Player and enabled:
 		NavigationManager.go_to_level(destination_level_tag, destination_door_tag)
