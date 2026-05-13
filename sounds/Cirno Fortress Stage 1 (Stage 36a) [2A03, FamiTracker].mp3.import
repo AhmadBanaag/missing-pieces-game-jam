@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://buwnsqja4r54e"
+path="res://.godot/imported/Cirno Fortress Stage 1 (Stage 36a) [2A03, FamiTracker].mp3-b4b9000e790fe1c1c077ec683a72cca4.mp3str"
+
+[deps]
+
+source_file="res://sounds/Cirno Fortress Stage 1 (Stage 36a) [2A03, FamiTracker].mp3"
+dest_files=["res://.godot/imported/Cirno Fortress Stage 1 (Stage 36a) [2A03, FamiTracker].mp3-b4b9000e790fe1c1c077ec683a72cca4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

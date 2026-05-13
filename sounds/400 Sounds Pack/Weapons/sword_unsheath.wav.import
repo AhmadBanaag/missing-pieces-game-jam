@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b7j4c70vxjthe"
+path="res://.godot/imported/sword_unsheath.wav-45e3f606b677d8fd99b37a3052527a7e.sample"
+
+[deps]
+
+source_file="res://sounds/400 Sounds Pack/Weapons/sword_unsheath.wav"
+dest_files=["res://.godot/imported/sword_unsheath.wav-45e3f606b677d8fd99b37a3052527a7e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

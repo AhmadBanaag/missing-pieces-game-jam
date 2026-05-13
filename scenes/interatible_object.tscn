@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://dyv2prqs3i8b4"]
+
+[ext_resource type="Script" uid="uid://db6tq7j7yucve" path="res://scripts/interatible_object.gd" id="1_cy6kx"]
+[ext_resource type="Texture2D" uid="uid://i4vv0avns3hp" path="res://assets/Item Sprites.png" id="2_6l4gt"]
+[ext_resource type="FontFile" uid="uid://7qafigy5wq67" path="res://assets/yoster.ttf" id="3_6l4gt"]
+[ext_resource type="Texture2D" uid="uid://cjkw0b7mbyh4u" path="res://assets/Page1.png" id="3_urkuc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_urkuc"]
+radius = 22.203604
+
+[node name="InteratibleObject" type="Area2D" unique_id=1602204698]
+collision_mask = 3
+script = ExtResource("1_cy6kx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1638432096]
+position = Vector2(-0.99999905, 1.1920929e-07)
+rotation = 0.34906584
+scale = Vector2(1.445946, 1.4756098)
+texture = ExtResource("2_6l4gt")
+region_enabled = true
+region_rect = Rect2(219.88338, 139.5713, 35.8882, 41.527206)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1193670417]
+shape = SubResource("CircleShape2D_urkuc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=693761142]
+process_mode = 3
+
+[node name="LetterUI" type="TextureRect" parent="CanvasLayer" unique_id=1516655554]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 405.0
+offset_top = 35.0
+offset_right = -405.0
+offset_bottom = -108.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_urkuc")
+
+[node name="NextHint" type="Label" parent="CanvasLayer" unique_id=767856198]
+texture_filter = 1
+offset_left = 458.0
+offset_top = 661.0
+offset_right = 839.0
+offset_bottom = 684.0
+theme_override_fonts/font = ExtResource("3_6l4gt")
+text = "Press [Enter] to continue to the next level"
+
+[node name="Label" type="Label" parent="." unique_id=632078037]
+offset_left = -81.0
+offset_top = -56.0
+offset_right = 96.0
+offset_bottom = -33.0
+theme_override_fonts/font = ExtResource("3_6l4gt")
+text = "[ S ] Get Diary Page"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

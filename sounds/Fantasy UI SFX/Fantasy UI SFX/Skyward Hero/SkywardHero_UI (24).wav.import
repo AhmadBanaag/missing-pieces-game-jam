@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://hs5nx1mjw4p"
+path="res://.godot/imported/SkywardHero_UI (24).wav-ad308393911b81d4c375b8daa31d6e8d.sample"
+
+[deps]
+
+source_file="res://sounds/Fantasy UI SFX/Fantasy UI SFX/Skyward Hero/SkywardHero_UI (24).wav"
+dest_files=["res://.godot/imported/SkywardHero_UI (24).wav-ad308393911b81d4c375b8daa31d6e8d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

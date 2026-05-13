@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://ddnvoprkdx0iv"]
+
+[ext_resource type="Texture2D" uid="uid://cb2216rsfwq7n" path="res://assets/dungeon_sidescroller-Raou/spr_torch.png" id="1_d4v33"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_my26j"]
+atlas = ExtResource("1_d4v33")
+region = Rect2(0, 0, 21, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2tjn"]
+atlas = ExtResource("1_d4v33")
+region = Rect2(21, 0, 21, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3k50"]
+atlas = ExtResource("1_d4v33")
+region = Rect2(42, 0, 21, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndh0a"]
+atlas = ExtResource("1_d4v33")
+region = Rect2(63, 0, 21, 27)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ktql7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_my26j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2tjn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3k50")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndh0a")
+}],
+"loop": true,
+"name": &"torch_lighting",
+"speed": 5.0
+}]
+
+[node name="torch" type="AnimatedSprite2D" unique_id=1937807890]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ktql7")
+animation = &"torch_lighting"
+autoplay = "torch_lighting"
+frame_progress = 0.7339322

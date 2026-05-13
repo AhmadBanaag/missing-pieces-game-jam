@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dh78y4rgbah7m"
+path="res://.godot/imported/Fantasy_UI (28).wav-da17d7d0360c2a2844936e3ed0b466da.sample"
+
+[deps]
+
+source_file="res://sounds/Fantasy UI SFX/Fantasy UI SFX/Fantasy/Fantasy_UI (28).wav"
+dest_files=["res://.godot/imported/Fantasy_UI (28).wav-da17d7d0360c2a2844936e3ed0b466da.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cnhcuwiv4d8js"
+path="res://.godot/imported/pottery_clang.wav-1c540c6c049d1e57e053a16d0268e19e.sample"
+
+[deps]
+
+source_file="res://sounds/400 Sounds Pack/Materials/pottery_clang.wav"
+dest_files=["res://.godot/imported/pottery_clang.wav-1c540c6c049d1e57e053a16d0268e19e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
